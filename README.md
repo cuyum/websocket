@@ -18,8 +18,9 @@ http://httpd.apache.org/docs/2.4/mod/mod_proxy_wstunnel.html
 
 4) Editar el archivo de configuración del host por defecto "localhost" (agregar lo siguiente)
 
+```
 <VirtualHost>
-.....
+...
     # mod_proxy setup.
     ProxyRequests Off
     ProxyPass /websockets http://localhost:8080/websockets
@@ -40,7 +41,7 @@ http://httpd.apache.org/docs/2.4/mod/mod_proxy_wstunnel.html
 	ProxyPass /ssocket/ wss://localhost:8080/websockets/
 .....
 </VirtualHost>
-
+```
 5) Acceder a http://localhost:8080/websockets o http://localhost/websockets
 6) Elegir la conexión que se quiere establecer del websocket (Directa al tomcat o Proxy por apache)
 7) Apretar el botón "Conect"
